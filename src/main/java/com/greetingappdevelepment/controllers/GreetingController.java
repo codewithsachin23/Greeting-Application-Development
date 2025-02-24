@@ -21,11 +21,4 @@ public class GreetingController {
         return "Greeting message was added"+key++;
     }
 
-    @GetMapping("/{id}")
-
-    public String getByID(@PathVariable int id){
-        return map.get(id);
-
-
-}
 }
