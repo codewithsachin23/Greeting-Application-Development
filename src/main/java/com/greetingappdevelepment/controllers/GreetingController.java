@@ -27,5 +27,12 @@ public class GreetingController {
         }
         return "new message added";
     }
+    @DeleteMapping("/{id}")
+    public String deleteGreeting(@PathVariable int id){
+        if (map.containsKey(id)){
+            map.remove(id);
+        }
+        return "greeting is deleted";
+    }
 
 }
