@@ -20,5 +20,12 @@ public class GreetingController {
         map.put(key,message);
         return "Greeting message was added"+key++;
     }
+    @PutMapping("/{id}")
+    public String updateGreeting(@PathVariable int id,@RequestBody String newMessage){
+        if (map.containsKey(id)){
+            map.put(id,newMessage);
+        }
+        return "new message added";
+    }
 
 }
